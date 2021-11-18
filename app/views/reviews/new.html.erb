@@ -1,0 +1,14 @@
+<%= simple_form_for [@restaurant, @review] do |f| %>
+
+<div class="form-inputs">
+  <%= f.input :content, label: 'Review Content', :label_html => { :class => 'review-content-title'}, :input_html => {:style=> 'padding_top: 50px', class: 'review-content'} %>
+  <%= f.input :rating %>
+</div>
+
+<div class="form-actions">
+  <%= f.submit class: 'btn btn-primary' %>
+</div>
+
+<% end %>
+
+<form action="review" method="post"></form>
